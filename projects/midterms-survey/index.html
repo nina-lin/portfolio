@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NL – Midterms Survey</title>
+
+    <link href="../../css/pages.css" rel="stylesheet">
+
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+
+
+  </head>
+
+  <body>
+    <div id="main">
+
+      <div class="menu">
+        <div class="menuOption">
+          <a title="Instagram" href="https://www.instagram.com/nlinphoto/" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to Instagram." src="../../images/icons/instagram.png" /></a></div>
+        <div class="menuOption">
+          <a title="Twitter" href="https://twitter.com/nlinphoto" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to Twitter." src="../../images/icons/twitter.png" /></a></div>
+        <div class="menuOption">
+          <a title="LinkedIn" href="https://www.linkedin.com/in/ninalin/" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to LinkedIn." src="../../images/icons/linkedin.png" /></a></div>
+        <div class="menuOption">
+          <a title="GitHub" href="https://github.com/nina-lin" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to GitHub." src="../../images/icons/github.png" /></a></div>
+        <!-- <div class="menuOption"><a href="mailto:nina@ninalin.com"><img class="menuIcon" src="images/icons/mail.png" /></a></div> -->
+
+        <div class="menuLine"></div>
+
+        <div class="menuOption">
+          <a title="About Me" href="/about.html">
+            <img class="menuIcon" alt="Know more about me." src="../../images/icons/about.png" /></a></div>
+
+        <div class="menuOption">
+          <a title="Home" href="../../">
+            <img class="menuIcon" alt="Go back to the main page." src="../../images/icons/home.png" /></a></div>
+      </div>
+
+    <div id="mainContainer" class="parent">
+
+      <div id="tooltip"></div>
+      <div id="svgContainer">
+        <div id="viz"></div>
+        <div id="legend"></div>
+
+        <div id="zoomPanel">
+          <div class="zoomControls" id="home"><img src="draw/arrows-angle-expand.svg"></div>
+          <!-- <div class="zoomControls"><img id="zoomIn" src="draw/plus.svg"></div>
+          <div class="zoomControls"><img id="zoomOut" src="draw/dash.svg"></div> -->
+        </div>
+
+      </div>
+
+      <div id="navigation">
+        <div class="hContainer">
+          <li class="dotNav active"></li>
+          <li class="dotNav"></li>
+          <li class="dotNav"></li>
+          <li class="dotNav"></li>
+          <li class="dotNav"></li>
+        </div> 
+
+        <div class="hContainer">
+          <img class="navs" id="leftnav" src="draw/arrow-left-circle-fill.svg" onClick="previous()"/>
+        
+          <img class="navs" id="rightnav" src="draw/arrow-right-circle-fill.svg" onClick="next()"/>
+        </div>
+      </div>
+
+      <div id="stepperText"></div>
+
+    </div> 
+
+    <div><em>As seen on <a target="_blank" href="https://www.nbcdfw.com/news/politics/these-3-issues-are-the-top-concerns-for-nbc-and-telemundo-voters/3111528/">NBC Television Stations</a> and <a target="_blank" href="https://www.telemundo52.com/noticias/decision/las-principales-preocupaciones-votantes-elecciones-intermedias/2338334/">Telemundo</a>.</em></div>
+
+  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.5/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src ='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js'></script>
+    <script src="js/d3-tip.js"></script>
+
+    <!-- D3 MAPPING -->
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    
+    <!-- ADD-ONS -->
+    <script src="js/runscript.js" async></script>
+
+    <!-- <script src="js/render.js"></script> -->
+
+    <!-- Special thanks to Cuthbert Chow @ Towards Data Science for his D3.js scroller tutorial (https://towardsdatascience.com/how-i-created-an-interactive-scrolling-visualisation-with-d3-js-and-how-you-can-too-e116372e2c73),Bill Mill for his D3.js mapping guide (https://billmill.org/making_a_us_map.html), and Kristi Zákopčanová for her grid force layout notebook (https://observablehq.com/@kikinna/force-layout-in-a-grid-phase-3) -->
+
+  </body>
+</html>

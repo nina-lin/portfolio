@@ -1,0 +1,177 @@
+@import url('https://media.nbcnewyork.com/assets/editorial/national/common/fonts/arthouse.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Flex&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+
+body {
+  font-family: 'Roboto Flex';
+  font-size: 1rem;
+  overflow-y: hidden;
+}
+
+#mainContainer {
+  width: 100%;
+  max-height: 100%;
+  padding-bottom: 30px;
+}
+
+#svgContainer { 
+  width: 100%;
+  position: relative;
+}
+
+#zoomPanel {
+  position: absolute;
+  bottom: 18%;
+  right: 2%;
+  color: #ffcdb7
+}
+
+.zoomControls {
+  display: flex; 
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.zoomControls > img { width: 100%; }
+
+#home { 
+  margin-bottom: 20px; 
+  background-color: #FFF;
+  box-shadow: inset 1px 1px 1px #bbbbbb;
+  cursor: not-allowed;
+}
+
+#home.active {
+  background-color: #FFF;
+  box-shadow: 1px 1px 1px #bbbbbb;
+  cursor: pointer;
+}
+
+#home > img { 
+  width: 60%; 
+  opacity: .8;
+}
+
+#stepperText {
+  font-size: 1rem;
+  color: #3f3f3f;
+  padding: 2%;
+}
+
+.hContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li {
+  border: 1px solid #c8c8c8;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+  list-style-type: none;
+}
+
+li.active {
+  background-color: #c8c8c8;
+}
+
+.navs {
+  width: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navs:disabled, .navs[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  background-color: white;
+  opacity: .9;
+  max-width: 300px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.tipColor {
+  color: #5F7288;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .618rem;
+}
+
+.graphTicks path, .graphTicks line {
+  display: none;
+}
+
+.groupLabels {
+  width: 160px;
+  height: 60px;
+  fill: grey;
+  opacity: .4;
+}
+
+.labelText {
+  font-size: 1.2rem;
+  text-anchor: middle;
+  color: black;
+  font-weight: 900;
+}
+
+.citylabel, .legendLabel {
+  font-size: .625rem;
+  color: #2d2d2d;
+  stroke: white;
+  stroke-width: 1px;
+  stroke-opacity: .2;
+  opacity: .9;
+}
+
+.citylabel { text-anchor: middle; }
+
+.citylocator { color: black; }
+
+.legendLabel { text-anchor: left; }
+
+#legend {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 96%;
+  height: 0;
+  margin: 2%;
+  padding: 1%;
+  font-size: .875rem;
+  pointer-events: none;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.markers {opacity: 0}
+
+@media (max-width: 800px) {
+  #zoomPanel {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #zoomPanel {
+    bottom: 15%;
+  }
+
+  #legend {
+    margin: 2%;
+  }
+}
