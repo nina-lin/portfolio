@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>AAPI Hate Incidents</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://media.nbcnewyork.com/assets/editorial/national/common/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- NBC CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700' rel='stylesheet' type='text/css'>
+    <link href='https://media.nbcnewyork.com/assets/editorial/national/common/fonts/arthouse.css' rel='stylesheet' type='text/css'>
+
+    <link href="../../css/pages.css" rel="stylesheet">
+    
+
+    <!-- Responsive iFrame stuff -->
+   
+  </head>
+
+  <body>
+    <div id="main">
+
+      <div class="menu">
+        <div class="menuOption">
+          <a title="Instagram" href="https://www.instagram.com/nlinphoto/" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to Instagram." src="../../images/icons/instagram.png" /></a></div>
+        <div class="menuOption">
+          <a title="Twitter" href="https://twitter.com/nlinphoto" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to Twitter." src="../../images/icons/twitter.png" /></a></div>
+        <div class="menuOption">
+          <a title="LinkedIn" href="https://www.linkedin.com/in/ninalin/" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to LinkedIn." src="../../images/icons/linkedin.png" /></a></div>
+        <div class="menuOption">
+          <a title="GitHub" href="https://github.com/nina-lin" target="_blank">
+            <img class="menuIcon" alt="An icon that leads to GitHub." src="../../images/icons/github.png" /></a></div>
+        <!-- <div class="menuOption"><a href="mailto:nina@ninalin.com"><img class="menuIcon" src="images/icons/mail.png" /></a></div> -->
+
+        <div class="menuLine"></div>
+
+        <div class="menuOption">
+          <a title="About Me" href="/about.html">
+            <img class="menuIcon" alt="Know more about me." src="../../images/icons/about.png" /></a></div>
+
+        <div class="menuOption">
+          <a title="Home" href="../../">
+            <img class="menuIcon" alt="Go back to the main page." src="../../images/icons/home.png" /></a></div>
+      </div>
+
+    <!-- Start content here-->
+    <!-- <h2 class="textset">But the Elderly Are Targeted in a Majority of Reported Physical Incidents</h2>
+    <p class="textset">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud </p> -->
+    <div id="xtalkCon" class="parent" style="width:100%; padding-bottom:30px;">
+
+      <button id="all" class="btn btn-light">All</button>
+      <button id="elderly" class="btn btn-light">Elderly</button>
+      
+      <select class="pad form-select" name="year" id="year">
+        <option value="all" selected>All Years</option>
+        <option value="2006">2006</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+      </select>
+      <br><br>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content infobox">
+      <div class="modal-header">
+        <h4 class="modal-title">AAPI Hate Incident</h4>
+      </div><br>
+      <p class="desc">Some text details about the case.</p>
+      <p class="textset"><strong class="link"></strong></p>
+    </div>
+  </div>
+
+      <div id="chart"></div>
+</div>
+
+    <div><em>As seen on <a target="_blank" href="https://www.nbcdfw.com/news/politics/these-3-issues-are-the-top-concerns-for-nbc-and-telemundo-voters/3111528/">NBC Television Stations</a></div>
+
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- This is D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://d3js.org/d3-dispatch.v2.min.js"></script>
+    <script src="https://d3js.org/d3-quadtree.v2.min.js"></script>
+    <script src="https://d3js.org/d3-timer.v2.min.js"></script>
+    <script src="https://d3js.org/d3-force.v2.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    
+    
+
+    <!-- Template -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://media.nbcnewyork.com/assets/editorial/national/common/js/tether.min.js"></script>
+    <script src="https://media.nbcnewyork.com/assets/editorial/national/common/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    <script src="bubbles.js"></script>
+
+
+  </body>
+</html>
