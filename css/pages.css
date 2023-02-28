@@ -1,0 +1,49 @@
+a, a:hover, .slats > a:hover {
+  color: #da2c43!important;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menuOption {
+  padding: 0 5px ;
+  cursor: pointer;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menuIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconBorder {
+  border-bottom: 1px solid #361313;
+}
+
+.menuLine {
+  background: #361313;
+  margin: 0 10px;
+  width: 1px;
+  height: 25px;
+}
+
+.intro {
+  margin: 30px 0;
+  display: block;
+  width: 100%;
+  font-weight: 200;
+}
