@@ -21,7 +21,7 @@
 
       config(); 
 
-      window.onload = setTimeout(resizeAllItems, 100)
+      window.addEventListener('load', resizeAllItems);
       window.addEventListener('resize', resizeAllItems);
     })
     .catch(error => {
@@ -30,32 +30,46 @@
 
 
   function config() {
+    let grid = document.getElementById('mainGrid');
+
     data.forEach((d, i) => {
-      let grid = document.getElementById('mainGrid')
+      let slat = document.createElement('div');
+      slat.id = `s${i}`
+      slat.className = 'slat'
 
-      let slat = `
-        <div id="s`+ i +`" class="slat">
-          <div class="wrapper">
-            <a target="_blank" href="${d.link} ">
-              <img alt="${d.name}" src="${d.media}" />
-              <div class="projectLabel"><span class="dateline"></span><span class="pName">${d.name}</span></div>
-            </a>
-          </div>
-        </div>
-      `
+      let wrapper = document.createElement('div')
+      wrapper.className = 'wrapper'
 
-      grid.insertAdjacentHTML('beforeend', slat)
+      let link = document.createElement('a')
+      link.target = '_blank';
+      link.href = d.link;
+
+      let img = document.createElement('img')
+      img.alt = d.name;
+      img.src = d.media;
+
+      //resize item after img load
+      img.addEventListener('load', function(){ resizeGridItems(slat)})
+
+      let labelDiv = document.createElement('div')
+      labelDiv.className = 'projectLabel'
+      labelDiv.innerHTML = `<span class="dateline"></span><span class="pName">${d.name}</span>`
+
+      link.appendChild(img)
+      link.appendChild(labelDiv)
+      wrapper.appendChild(link)
+      slat.appendChild(wrapper)
+      grid.appendChild(slat)
     })
   }
 
   function resizeGridItems(item){
-    grid = document.getElementById('mainGrid')
+    let grid = document.getElementById('mainGrid')
     
-    rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'))
 
-    rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'))
-
-    rowSpan = Math.ceil((item.querySelector('.wrapper').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))
+    let rowSpan = Math.ceil((item.querySelector('.wrapper').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))
 
     window.innerWidth < 400 ? 
       item.style.gridRowEnd = 'span ' + (rowSpan + 1):
@@ -64,7 +78,7 @@
   }
 
   function resizeAllItems(){
-    allItems = document.querySelectorAll('.slat')
+    let allItems = document.querySelectorAll('.slat')
 
     allItems.forEach(item => {
       resizeGridItems(item)
